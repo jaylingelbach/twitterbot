@@ -1,7 +1,7 @@
 var Twit = require('twit');
 
 
-    let twit = new Twit({
+let twit = new Twit({
     consumer_key: 'mRKLnCTR7Zwpp4C3cDzBBo3rW',
     consumer_secret: 'nnNRlhu43efcTby3OKvFD1JbqVb5sExkCprINfE7gjca6eTLrQ',
     access_token: '976857674842243072-byMmsxkfgdeRVKTGdYxWmWXi72VBPA8',
@@ -13,9 +13,11 @@ let params = {
     q: '#100DaysOfCode since:20200606',
     count: 20
   };
+
   function tweetResult(data) {
-    for (let i = 1; i <= data.length; i++) {
-      console.log(data[i].text);
+    var tweetMsgs = data.statuses;
+    for (let i = 1; i <= tweetMsgs.length; i++) {
+        console.log(tweetMsgs[i].text);
     }
   }
 
