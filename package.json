@@ -1,0 +1,22 @@
+{
+  "name": "twit2",
+  "version": "1.0.0",
+  "description": "twit2",
+  "main": "twitterbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaylingelbach/twit.git"
+  },
+  "author": "Jay Lingelbach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaylingelbach/twit/issues"
+  },
+  "homepage": "https://github.com/jaylingelbach/twit#readme",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
