@@ -10,15 +10,21 @@ let twit = new Twit({
 });
 
 let params = {
-    q: '#100DaysOfCode since:20200606',
-    count: 20
+    q: '#StarWarsDay',
+    count: 5
   };
 
-  function tweetResult(data) {
+  function tweetResult(err, data, response) {
     var tweetMsgs = data.statuses;
-    for (let i = 1; i <= tweetMsgs.length; i++) {
-        console.log(tweetMsgs[i].text);
+    for (let i = 0; i < tweetMsgs.length; i++) {
+        if (err) {
+            console.log("Error message for retweet " + err.message);
+        } else {
+            console.log('Twitter handle: ', tweetMsgs[i].user.screen_name);
+            console.log(tweetMsgs[i].text);
+            console.log('\n');
+        }
     }
   }
 
-  twit.get('search/tweets, params, tweetResult');
+  twit.get('search/tweets', params, tweetResult);
