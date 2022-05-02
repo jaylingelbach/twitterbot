@@ -14,7 +14,7 @@ let params = {
   };
   twit.get('search/tweets, params');
 
-  function tweetResult(err, data, response) {
+  function tweetResult(data) {
     var tweetMsgs = data.statuses;
     for (let i = 1; i <= tweetMsgs.length; i++) {
       console.log(tweetMsgs[i].text);
