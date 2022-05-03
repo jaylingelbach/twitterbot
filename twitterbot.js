@@ -8,6 +8,12 @@ let twit = new Twit({
     timeout_ms: 60 * 1000  // optional HTTP request timeout to apply to all requests.
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
+
 let params = {
     q: 'Lego Star Wars',
     count: 1
