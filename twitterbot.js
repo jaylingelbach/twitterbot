@@ -3,16 +3,11 @@ var Twit = require('twit');
 let twit = new Twit({
     consumer_key: process.env.LEARNINGBOT_CONSUMER_KEY,
     consumer_secret: process.env.LEARNINGBOT_CONSUMER_SECRET,
-    access_token: process.env.LEARNINGBOT_ACCESS_TOKEN,
-    access_token_secret: process.env.LEARNINGBOT_ACCESS_TOKEN_SECRET,
-    timeout_ms: 60 * 1000  // optional HTTP request timeout to apply to all requests.
+    app_only_auth: true,
+    // access_token: process.env.LEARNINGBOT_ACCESS_TOKEN,
+    // access_token_secret: process.env.LEARNINGBOT_ACCESS_TOKEN_SECRET,
+    // timeout_ms: 60 * 1000  // optional HTTP request timeout to apply to all requests.
 });
-
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-app.listen(port);
 
 let params = {
     q: 'Lego Star Wars',
