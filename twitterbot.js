@@ -1,6 +1,5 @@
 var Twit = require('twit');
 
-
 let twit = new Twit({
     consumer_key: process.env.LEARNINGBOT_CONSUMER_KEY,
     consumer_secret: process.env.LEARNINGBOT_CONSUMER_SECRET,
@@ -18,7 +17,7 @@ let params = {
     var tweetMsgs = data.statuses;
     for (let i = 0; i < tweetMsgs.length; i++) {
         if (err) {
-            console.log("Error message for retweet " + err.message);
+            console.log("Error message for twit " + err.message);
         } else {
             console.log('Twitter handle: ', tweetMsgs[i].user.screen_name);
             console.log('User Location: ', tweetMsgs[i].user.location);
