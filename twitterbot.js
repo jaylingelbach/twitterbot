@@ -2,10 +2,10 @@ var Twit = require('twit');
 
 
 let twit = new Twit({
-    consumer_key: 'mRKLnCTR7Zwpp4C3cDzBBo3rW',
-    consumer_secret: 'nnNRlhu43efcTby3OKvFD1JbqVb5sExkCprINfE7gjca6eTLrQ',
-    access_token: '976857674842243072-byMmsxkfgdeRVKTGdYxWmWXi72VBPA8',
-    access_token_secret: 'QY9SWnaARAk6jJqeD1zBgLlginAdDAK22vQKazqGjFnQw',
+    consumer_key: process.env.LEARNINGBOT_CONSUMER_KEY,
+    consumer_secret: process.env.LEARNINGBOT_CONSUMER_SECRET,
+    access_token: process.env.LEARNINGBOT_ACCESS_TOKEN,
+    access_token_secret: process.env.LEARNINGBOT_ACCESS_TOKEN_SECRET,
     timeout_ms: 60 * 1000  // optional HTTP request timeout to apply to all requests.
 });
 
