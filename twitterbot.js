@@ -10,8 +10,8 @@ let twit = new Twit({
 });
 
 let params = {
-    q: '#StarWarsDay',
-    count: 5
+    q: 'Lego Star Wars',
+    count: 1
   };
 
   function tweetResult(err, data, response) {
@@ -21,6 +21,7 @@ let params = {
             console.log("Error message for retweet " + err.message);
         } else {
             console.log('Twitter handle: ', tweetMsgs[i].user.screen_name);
+            console.log('User Location: ', tweetMsgs[i].user.location);
             console.log(tweetMsgs[i].text);
             console.log('\n');
         }
